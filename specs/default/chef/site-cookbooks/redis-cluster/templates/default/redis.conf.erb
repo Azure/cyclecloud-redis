@@ -1,0 +1,9 @@
+port <%= @port %>
+cluster-enabled yes
+cluster-config-file nodes.<%= @port %>.conf
+cluster-node-timeout <%= node['redis']['cluster-node-timeout'] %>
+appendonly no
+save ""
+<% if node[:redis][:version] > '3.2' -%>
+protected-mode no
+<% end -%>
