@@ -4,7 +4,7 @@
 
 [cluster Redis]
 FormLayout = selectionpanel
-IconUrl = https://github.com/CycleCloud/redis/raw/master/icon.png
+IconUrl = https://github.com/Azure/cyclecloud-redis/raw/master/icon.png
 Category = Infrastructure
 
 Autoscale = false
@@ -65,12 +65,12 @@ Order = 1
         [[[parameter RedisCluster]]]
         HideLabel = true
         Config.Plugin = pico.widget.HtmlTemplateWidget
-        Config.Template := "<table><tr><td><img src='https://github.com/CycleCloud/redis/raw/master/icon.png' width='192' height='192'></td></tr><tr><td><p>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. See the <a href=\"https://redis.io/\" target=\"_blank\">Redis project site</a>for an overview.  This cluster type is configured to use <a href=\"https://redis.io/topics/cluster-tutorial\" target=\"_blank\">Redis Cluster</a> to create a scalable cache.</p></td></tr></table>"
+        Config.Template := "<table><tr><td><img src='https://github.com/Azure/cyclecloud-redis/raw/master/icon.png' width='192' height='192'></td></tr><tr><td><p>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. See the <a href=\"https://redis.io/\" target=\"_blank\">Redis project site</a>for an overview.  This cluster type is configured to use <a href=\"https://redis.io/topics/cluster-tutorial\" target=\"_blank\">Redis Cluster</a> to create a scalable cache.</p></td></tr></table>"
 
         [[[parameter Readme]]]
         HideLabel = true
         Config.Plugin = pico.widget.HtmlTemplateWidget
-        Config.Template := "Follow the instructions in the <a href=\"https://github.com/CycleCloud/redis/\" target=\"_blank\">README</a> for details on instructions on extending and configuring the Project for your environment."
+        Config.Template := "Follow the instructions in the <a href=\"https://github.com/Azure/cyclecloud-redis/\" target=\"_blank\">README</a> for details on instructions on extending and configuring the Project for your environment."
 
 
 [parameters Required Settings]
