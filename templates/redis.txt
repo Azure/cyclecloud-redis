@@ -2,9 +2,8 @@
 ## Redis-Cluster Configuration File ##
 ######################################
 
-[cluster Redis]
+[cluster RedisCluster]
 FormLayout = selectionpanel
-IconUrl = https://github.com/Azure/cyclecloud-redis/raw/master/icon.png
 Category = Infrastructure
 
 Autoscale = false
@@ -14,9 +13,9 @@ Autoscale = false
     ImageName = $ImageName
     SubnetId = $SubnetId
     Region = $Region
-    KeyPairLocation = $KeyPairLocation
-
+    KeyPairLocation = ~/.ssh/cyclecloud.pem
     AdditionalClusterInitSpecs = $DefaultClusterInitSpecs
+    UsePublicNetwork = $UsePublicNetwork
     
     [[[cluster-init cyclecloud/redis:default:$ProjectVersion]]]
 
@@ -166,7 +165,7 @@ Order = 20
 
         [[[parameter ReturnProxy]]]
         Label = Return Proxy
-        DefaultValue = false
+        DefaultValue = true
         ParameterType = Boolean
         Config.Label = Use SSH tunnel to connect to CycleCloud (required if direct access is blocked)
 
@@ -175,10 +174,3 @@ Order = 20
         DefaultValue = true
         ParameterType = Boolean
         Config.Label = Access master node from the Internet
-
-        [[[parameter KeyPairLocation]]]
-        Label = Keypair Path
-        Description = The path to the private SSH key to use for the `cyclecloud` user on linux nodes.
-        DefaultValue = ~/.ssh/cyclecloud.pem
-        Required = True
-
