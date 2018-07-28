@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
 # Redis Cluster for clients to use
 default['redis']['cluster_name'] = node['cyclecloud']['cluster']['id']
 

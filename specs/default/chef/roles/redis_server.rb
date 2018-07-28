@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
 name "redis_server"
 description "Redis Server role"
 run_list("recipe[redis-cluster::server]")

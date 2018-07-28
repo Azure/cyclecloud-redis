@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
 include_recipe 'redis-cluster::default'
 
 log "Configuring kernel for high memory redis application..." do level :info end

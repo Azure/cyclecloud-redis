@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
 name             "redis-cluster"
 maintainer       "CycleComputing LLC"
 maintainer_email "support@cyclecomputing.com"
