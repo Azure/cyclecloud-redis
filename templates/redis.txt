@@ -150,12 +150,12 @@ Order = 20
         DefaultValue = cycle.image.centos7
 
         [[[parameter DefaultClusterInitSpecs]]]
-        Label = Default Cluster-Init Specs
+        Label = Default Cluster-Init
         Description = Cluster init specs to apply to all nodes
         ParameterType = Cloud.ClusterInitSpecs
 
         [[[parameter ServerClusterInitSpecs]]]
-        Label = Server Cluster-Init Specs
+        Label = Server Cluster-Init
         DefaultValue = =undefined
         Description = Cluster init specs to apply to the master node
         ParameterType = Cloud.ClusterInitSpecs
