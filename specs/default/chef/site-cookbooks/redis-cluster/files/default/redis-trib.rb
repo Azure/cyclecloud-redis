@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
 
 # TODO (temporary here, we'll move this into the Github issues once
 #       redis-trib initial implementation is completed).
