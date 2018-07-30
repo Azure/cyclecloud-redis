@@ -2,7 +2,7 @@
 ## Redis-Cluster Configuration File ##
 ######################################
 
-[cluster RedisCluster]
+[cluster Redis]
 FormLayout = selectionpanel
 Category = Infrastructure
 
@@ -148,6 +148,7 @@ Order = 20
         ParameterType = Cloud.Image
         Config.OS = linux
         DefaultValue = cycle.image.centos7
+        Config.Filter := Package === "cycle.image.centos7"
 
         [[[parameter DefaultClusterInitSpecs]]]
         Label = Default Cluster-Init
