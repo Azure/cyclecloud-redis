@@ -52,7 +52,7 @@ Autoscale = false
        [[[cluster-init cyclecloud/redis:server:$ProjectVersion]]]
 
        [[[network-interface]]]
-       AssociatePublicIpAddress = false
+       AssociatePublicIpAddress = $UsePublicNetworkMembers
 
 
 
@@ -61,7 +61,7 @@ Order = 1
 
     [[parameters About Redis Cluster]]
 
-        [[[parameter RedisCluster]]]
+        [[[parameter Redis]]]
         HideLabel = true
         Config.Plugin = pico.widget.HtmlTemplateWidget
         Config.Template := "<table><tr><td><p>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. See the <a href=\"https://redis.io/\" target=\"_blank\">Redis project site</a>for an overview.  This cluster type is configured to use <a href=\"https://redis.io/topics/cluster-tutorial\" target=\"_blank\">Redis Cluster</a> to create a scalable cache.</p></td></tr></table>"
@@ -120,7 +120,7 @@ Order = 20
         ParameterType = Cloud.Credentials
 
 
-    [[parameters Redis]]
+    [[parameters RedisCluster]]
     Description = Adjust the Redis configuration options.  (Data redunancy and fault tolerance requires more than 1 server (max: 10).)
     Order = 20
 
@@ -172,7 +172,13 @@ Order = 20
         Config.Label = Use SSH tunnel to connect to CycleCloud (required if direct access is blocked)
 
         [[[parameter UsePublicNetwork]]]
-        Label = Public Head Node
+        Label = Public Proxy Node
         DefaultValue = true
         ParameterType = Boolean
-        Config.Label = Access master node from the Internet
+        Config.Label = Access proxy node from the Internet
+
+        [[[parameter UsePublicNetworkMembers]]]
+        Label = Public Members
+        DefaultValue = false
+        ParameterType = Boolean
+        Config.Label = Access member servers from the Internet
